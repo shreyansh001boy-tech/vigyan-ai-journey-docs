@@ -1,0 +1,35 @@
+flowchart TD
+    subgraph Data Layer
+        D1[Synthetic Defence STEM CoT 2,205 samples]
+        D2[50k Autonomous Curator Daemon]
+        D3[LanceDB 2,205 Vector Store]
+    end
+
+    subgraph Model Fleet
+        M32[Vigyan-32B Titan\n14 Shards ~60 GB]
+        M7[Vigyan-7B Scholar\n68.2% Calibrated Score]
+        M2[Vigyan-2B Edge\n1.4 GB Q4_K_M GGUF]
+    end
+
+    subgraph Infrastructure
+        AWS[AWS SageMaker G5\n$800 Preserved Credits]
+        KAG[Kaggle Dual T4\nZero-Cost Batch GPUs]
+        HF[Hugging Face Vault\n8 Repositories | 81+ GB]
+    end
+
+    subgraph Production Gateway
+        GW[FastAPI Unified Gateway]
+        GEM[3x Gemini Pro Round-Robin\n135k req/mo @ ₹0]
+        MOD[Modal Serverless T4\nScale-to-Zero 7B]
+        ORA[Oracle Cloud ARM\n24GB Always-Free 2B Host]
+    end
+
+    D1 --> M32
+    M32 -- SFT Distillation --> M7
+    M32 -- SFT Distillation --> M2
+    D3 --> M7
+    M7 --> MOD
+    M2 --> ORA
+    MOD --> GW
+    ORA --> GW
+    GEM --> GW
