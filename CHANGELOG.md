@@ -29,12 +29,11 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
 ## [Phase 4: Dual-RAG & Vector Grounding] - September 21–22, 2026
 * **Milestone**: Indexed 2,205 STEM vectors into an embedded LanceDB database (`all-MiniLM-L6-v2`).
 * **Post-Mortem**: Diagnosed the stop-string `tokenizer=tokenizer` bug that caused the v8 evaluation regression.
-* **Edge Redirection**: Discovered the 2B attention collapse law and redirected 2B Edge exclusively to high-velocity edge support.
+* **Edge Redirection**: Discovered the 2B attention collapse law and redirected 2B Edge exclusively to high-velocity edge structured routing.
 
 ---
 
-## [Phase 5: Commercial Fleet Architecture & Freelancer Stack] - September 22, 2026
-* **Product**: Built the Unified FastAPI API Gateway with FAQ caching, intent routing, and quota enforcement.
-* **Zero-Cost Scaling**: Implemented the 3-account Gemini Pro key rotator (135,000 queries/month free) and Modal serverless integration.
+## [Phase 5: Unified Serving Architecture & Workstation Stabilization] - September 22, 2026
+* **Architecture**: Built the Unified FastAPI Serving Gateway combining local caching, 2B CPU inference, and 7B vLLM serving.
 * **Workstation Stabilization**: Resolved the 2.15 GB Chrome GPU shared memory leak and language server indexing explosion on 8GB developer hardware.
-* **Open Source / Agent Skills**: Package 19 production-ready agent skills into a private GitHub repository.
+* **Open Source / Agent Skills**: Packaged 16 production-ready technical agent skills into a private GitHub repository.

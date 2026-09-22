@@ -12,16 +12,15 @@ flowchart TD
     end
 
     subgraph Infrastructure
-        AWS[AWS SageMaker G5\n$800 Preserved Credits]
-        KAG[Kaggle Dual T4\nZero-Cost Batch GPUs]
+        AWS[AWS SageMaker G5 Clusters\nDistributed FSDP]
+        KAG[Kaggle Dual T4 Fleet\nAutomated Curation & Evals]
         HF[Hugging Face Vault\n8 Repositories | 81+ GB]
     end
 
-    subgraph Production Gateway
+    subgraph Serving Layer
         GW[FastAPI Unified Gateway]
-        GEM[3x Gemini Pro Round-Robin\n135k req/mo @ ₹0]
-        MOD[Modal Serverless T4\nScale-to-Zero 7B]
-        ORA[Oracle Cloud ARM\n24GB Always-Free 2B Host]
+        MOD[vLLM Inference Container\n7B Engine]
+        ORA[llama.cpp Engine\n2B Edge Host]
     end
 
     D1 --> M32
@@ -32,4 +31,3 @@ flowchart TD
     M2 --> ORA
     MOD --> GW
     ORA --> GW
-    GEM --> GW

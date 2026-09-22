@@ -1,4 +1,4 @@
-# 08. Engineering Post-Mortems & Radical Truth
+# 07. Engineering Post-Mortems & Radical Truth
 
 ## 1. The 2B In-Context Attention Collapse Law
 

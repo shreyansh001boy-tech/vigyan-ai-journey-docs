@@ -1,11 +1,10 @@
 # Vigyan AI: The Sovereign Foundation Model & Fleet Engineering Journey
 
-> **An exhaustive, unvarnished technical chronicle of building, training, distilling, benchmarking, and commercially operationalizing an independent sovereign AI model fleet from India.**
+> **An exhaustive, unvarnished technical chronicle of building, training, distilling, benchmarking, and serving an independent sovereign AI model fleet from India.**
 
 [![Fleet Architecture](https://img.shields.io/badge/Architecture-2B%20%7C%207B%20%7C%2032B-blue.svg)](docs/01_architecture_overview.md)
 [![Verified Score](https://img.shields.io/badge/7B%20Benchmark-68.2%25%20Calibrated-success.svg)](docs/04_benchmarking_and_evaluation.md)
 [![Storage](https://img.shields.io/badge/HuggingFace%20Vault-8%20Repos%20%7C%2081%2B%20GB-orange.svg)](docs/06_cloud_and_infrastructure.md)
-[![Cloud Cost](https://img.shields.io/badge/AWS%20Runway-%24800%20Preserved-brightgreen.svg)](docs/06_cloud_and_infrastructure.md)
 [![License](https://img.shields.io/badge/License-Proprietary%20%2F%20Confidential-red.svg)](#confidentiality)
 
 ---
@@ -19,7 +18,7 @@ Over a multi-week sprint spanning AWS SageMaker FSDP distributed clusters, Kaggl
 2. **Top-Down Distillation**: Transferring reasoning capacity from a 32B Titan teacher into specialized 7B Scholar and 2B Edge student models.
 3. **Dual-RAG Grounding**: Coupling dense LanceDB vector embeddings with AST-verified numerical tool-calling.
 4. **LLM-as-a-Judge Evaluation**: Calibrating true model performance against rigorous multi-domain rubrics using Gemini Flash models.
-5. **Zero-Cost Production Gateway**: Architecting a commercial multi-cloud API gateway capable of 200,000+ monthly queries at ₹0 infrastructure expenditure.
+5. **Unified Serving Gateway**: Architecting a high-throughput API gateway combining local caching, 2B CPU inference, and 7B vLLM serving.
 
 ---
 
@@ -32,9 +31,8 @@ Over a multi-week sprint spanning AWS SageMaker FSDP distributed clusters, Kaggl
 | [**`03_curation_and_datasets.md`**](docs/03_curation_and_datasets.md) | **Synthetic Data & Vector Curation** | `Vigyan-Defence-STEM-CoT-Master` (2,205 samples), LanceDB vector embeddings, 50k curator daemon. |
 | [**`04_benchmarking_and_evaluation.md`**](docs/04_benchmarking_and_evaluation.md) | **Rigorous Evaluation & Benchmarks** | GSM8k (1,319 problems), Sovereign STEM-10 suite, Gemini Judge rubrics, v1–v8 evolution. |
 | [**`05_rag_and_tool_calling.md`**](docs/05_rag_and_tool_calling.md) | **Dual-RAG & Symbolic Tool Execution** | Embedded LanceDB retrieval, two-pass tool execution (`[TOOL: calculate]`), stop-string invariants. |
-| [**`06_cloud_and_infrastructure.md`**](docs/06_cloud_and_infrastructure.md) | **Multi-Cloud Topography & Credit Control** | AWS credit preservation ($800 remaining), Kaggle headless GPU pipelines, Hugging Face 81+ GB vault. |
-| [**`07_commercial_playbook.md`**](docs/07_commercial_playbook.md) | **Freelancer & Enterprise Monetization** | ₹0 cost stack, ₹5,000/mo Starter plan (10,000 queries), 100% gross margin business model. |
-| [**`08_post_mortems_and_lessons.md`**](docs/08_post_mortems_and_lessons.md) | **Engineering Post-Mortems & Radical Truth** | 2B few-shot collapse law, prompt formatting fragility, teacher quality ceiling analysis. |
+| [**`06_cloud_and_infrastructure.md`**](docs/06_cloud_and_infrastructure.md) | **Cloud Topography & Vaults** | Multi-GPU training orchestration, Kaggle headless GPU pipelines, Hugging Face 81+ GB vault. |
+| [**`07_post_mortems_and_lessons.md`**](docs/07_post_mortems_and_lessons.md) | **Engineering Post-Mortems & Radical Truth** | 2B few-shot collapse law, prompt formatting fragility, teacher quality ceiling analysis. |
 
 ---
 
@@ -55,16 +53,15 @@ flowchart TD
     end
 
     subgraph Infrastructure
-        AWS[AWS SageMaker G5\n$800 Preserved Credits]
-        KAG[Kaggle Dual T4\nZero-Cost Batch GPUs]
+        AWS[AWS SageMaker G5 Clusters\nDistributed FSDP]
+        KAG[Kaggle Dual T4 Fleet\nAutomated Curation & Evals]
         HF[Hugging Face Vault\n8 Repositories | 81+ GB]
     end
 
-    subgraph Production Gateway
+    subgraph Serving Layer
         GW[FastAPI Unified Gateway]
-        GEM[3x Gemini Pro Round-Robin\n135k req/mo @ ₹0]
-        MOD[Modal Serverless T4\nScale-to-Zero 7B]
-        ORA[Oracle Cloud ARM\n24GB Always-Free 2B Host]
+        MOD[vLLM Inference Container\n7B Engine]
+        ORA[llama.cpp Engine\n2B Edge Host]
     end
 
     D1 --> M32
@@ -75,7 +72,6 @@ flowchart TD
     M2 --> ORA
     MOD --> GW
     ORA --> GW
-    GEM --> GW
 ```
 
 ---
