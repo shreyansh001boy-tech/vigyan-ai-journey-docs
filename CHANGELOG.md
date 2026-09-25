@@ -37,3 +37,13 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
 * **Architecture**: Built the Unified FastAPI Serving Gateway combining local caching, 2B CPU inference, and 7B vLLM serving.
 * **Workstation Stabilization**: Resolved the 2.15 GB Chrome GPU shared memory leak and language server indexing explosion on 8GB developer hardware.
 * **Open Source / Agent Skills**: Packaged 16 production-ready technical agent skills into a private GitHub repository.
+
+---
+
+## [Phase 6: Titan 32B Surgery, Tri-Blend SFT & Universal Quantization] - September 25, 2026
+* **Root Cause Rectification**: Diagnosed the 3.4% MATH-500 collapse as catastrophic forgetting of the mathematical manifold during specialized fine-tuning.
+* **DARE-TIES Surgery**: Launched automated DARE-TIES merge on AWS SageMaker (`ml.g5.2xlarge`) splicing `allenai/OLMo-2-0325-32B-Instruct` into `Vigyan-AI-32B` to restore MATH-500 >78%.
+* **Tri-Blend SFT Compilation**: Built and published `shreyansh12183/Vigyan-32B-TriBlend-SFT` (37,044 samples) standardizing delimiter compliance (`<thought>...</thought><answer>\boxed{...} #### ...</answer>`) and anchoring 100% unified sovereign identity.
+* **LanceDB v3 Integration**: Upgraded the RAG backbone with `shreyansh12183/Vigyan-STEM-LanceDB-v3` (1.49M indexed STEM vectors, IVF-PQ indexed).
+* **Universal Quantization Strategy**: Architected AWQ (4-bit single GPU vLLM cloud serving) and GGUF Q4_K_M (universal edge/Apple Silicon/workstation offline deployment).
+
