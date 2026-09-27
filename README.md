@@ -34,6 +34,7 @@ Over a multi-week sprint spanning AWS SageMaker FSDP distributed clusters, Kaggl
 | [**`06_cloud_and_infrastructure.md`**](docs/06_cloud_and_infrastructure.md) | **Cloud Topography & Vaults** | Multi-GPU training orchestration, Kaggle headless GPU pipelines, Hugging Face 81+ GB vault. |
 | [**`07_post_mortems_and_lessons.md`**](docs/07_post_mortems_and_lessons.md) | **Engineering Post-Mortems & Radical Truth** | 2B few-shot collapse law, prompt formatting fragility, teacher quality ceiling analysis. |
 | [**`08_titan_32b_post_training_and_quantization.md`**](docs/08_titan_32b_post_training_and_quantization.md) | **32B Titan Surgery, Alignment & Universal Quantization** | DARE-TIES surgery, Tri-Blend dataset (37k), LanceDB v3 integration, AWQ & GGUF universal quantization. |
+| [**`09_sovereign_gguf_quantization_and_lancedb_v4.md`**](docs/09_sovereign_gguf_quantization_and_lancedb_v4.md) | **Sovereign GGUF Quantization & LanceDB v4 Grounding** | 100% Cloud-to-Cloud ($0.00 spend), Interleaved Disk-Purge Protocol, Vigyan-2B/7B GGUFs, LanceDB v4 hybrid indexing, GBNF agentic tools. |
 
 ---
 
