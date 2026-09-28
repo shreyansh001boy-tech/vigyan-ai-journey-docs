@@ -114,4 +114,5 @@ To deploy Vigyan models in an OpenCode fork without native function-calling weig
 | :--- | :--- | :--- | :--- | :--- |
 | `shreyansh12183/Vigyan-Models-GGUF` | **Private** | `vigyan-2b-stem-q4_k_m.gguf` | 1,173,020,096 bytes | Remote Git LFS SHA-256 |
 | `shreyansh12183/Vigyan-Models-GGUF` | **Private** | `vigyan-7b-stem-q4_k_m.gguf` | 4,472,019,520 bytes | Remote Git LFS SHA-256 |
-| `shreyansh12183/Vigyan-STEM-LanceDB-v4`| **Private** | `vigyan_stem_lancedb_v4.tar.gz` | In-Flight Package | Remote SHA-256 Manifest |
+| `shreyansh12183/Vigyan-STEM-LanceDB-v4`| **Private** | `vigyan_stem_lancedb_v4.tar.gz` | 442,674,460 bytes (270,363 vectors) | Remote SHA-256 Manifest |
+
