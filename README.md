@@ -37,6 +37,7 @@ Over a multi-week sprint spanning AWS SageMaker FSDP distributed clusters, Kaggl
 | [**`09_sovereign_gguf_quantization_and_lancedb_v4.md`**](docs/09_sovereign_gguf_quantization_and_lancedb_v4.md) | **Sovereign GGUF Quantization & LanceDB v4 Grounding** | 100% Cloud-to-Cloud ($0.00 spend), Interleaved Disk-Purge Protocol, Vigyan-2B/7B GGUFs, LanceDB v4 hybrid indexing, GBNF agentic tools. |
 | [**`10_colab_cloud_factory_and_studio_fork.md`**](docs/10_colab_cloud_factory_and_studio_fork.md) | **Colab Cloud Factory & Sovereign Vigyan AI Studio** | Zero local RAM builds via `google-colab-cli`, OpenCode white-labeling, telemetry purge, 100% offline air-gapped Zorin OS Lite & Windows GUI. |
 | [**`11_vigyan_stem_alignment_and_pc_agentic_pipeline.md`**](docs/11_vigyan_stem_alignment_and_pc_agentic_pipeline.md) | **Sovereign STEM Alignment, 2B Leak Cure & PC Edge Pipeline** | Response-masked SFT on Dual Tesla T4s, 100% thought-leak cure in 2B, 100% circuit physics in 7B, local PC edge agentic pipeline via `llama.cpp` + LanceDB v4. |
+| [**`12_vigyan_7b_production_tool_dpo_and_distribution.md`**](docs/12_vigyan_7b_production_tool_dpo_and_distribution.md) | **Vigyan-7B Production Tool-DPO & Multi-Channel Distribution** | 2B reasoning deprecation, 2,000-pair verified Tool-DPO alignment, lm-eval-harness academic rigor, Hugging Face Space & Ollama distribution. |
 
 ---
 

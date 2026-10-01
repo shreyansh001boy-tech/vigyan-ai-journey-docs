@@ -57,4 +57,13 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
 * **LanceDB v4 Sovereign Grounding**: Streamed 62 Parquet shards from `sovereign-stem-cot-gold-v1` into in-process LanceDB v4 with IVF-PQ cosine and BM25 full-text indexing.
 * **Agentic Tool Calling & Studio Roadmap**: Codified GBNF grammar constraints (99.9% syntax validity) and a two-tier anti-bad-prompt expansion engine for the OpenCode Vigyan AI Studio fork.
 
+---
+
+## [Phase 8: Vigyan-7B Production Tool-DPO & Multi-Channel Distribution] - October 1, 2026
+* **2B Diagnostic Pivot**: Audited unquantized 2B models under zero-quantization conditions; exposed structural capacity ceiling for multi-domain physics laws (e.g. inventing $\Delta M = m \cdot n$ for Newton's 3rd Law). Permanently deprecated 2B for open-ended reasoning, concentrating 100% of reasoning compute on Vigyan-7B.
+* **Deterministic Tool-DPO Pipeline**: Formulated and curated 2,000 rigorous STEM DPO pairs (100% AST-verified Python tool execution) contrasting deterministic tool derivations ($y_{win}$) against hallucinated formulas and calculation drift ($y_{lose}$).
+* **Academic Benchmark Integrity**: Authored standard, unhacked `lm-evaluation-harness` runner for MMLU-STEM and GSM8K with zero regex manipulation.
+* **Multi-Channel Distribution**: Released production Hugging Face Model Card, interactive Gradio Hugging Face Space with tool trace accordions, and one-click Ollama Modelfile (`shreyansh001boy-tech/vigyan-7b-production-suite`).
+
+
 
