@@ -41,6 +41,8 @@ Over a multi-week sprint spanning AWS SageMaker FSDP distributed clusters, Kaggl
 | [**`13_gen2_cloud_to_cloud_masterpiece_and_7b_agentic_eval.md`**](docs/13_gen2_cloud_to_cloud_masterpiece_and_7b_agentic_eval.md) | **Gen-2 Cloud-to-Cloud Masterpiece & 7B Agentic Evaluation** | Zero AWS spend ($0.00 compute), 10k balanced master dataset, prompt loss masking (-100), 7B dual-agent eval (84.8% sovereign vs 28.7% baseline). |
 | [**`14_vigyan_2b_edge_masterpiece_resurrection_and_honest_benchmarks.md`**](docs/14_vigyan_2b_edge_masterpiece_resurrection_and_honest_benchmarks.md) | **Vigyan-2B Edge Masterpiece Resurrection & Honest Benchmarks** | Curing the 0.048 overfit collapse, all-module LoRA targeting (66 MB), dynamic early stopping (step 60), 50-problem benchmark (+162.5% gain), private showcase repo. |
 | [**`15_sovereign_dual_tier_moe_upcycling_and_chinese_lab_mastery.md`**](docs/15_sovereign_dual_tier_moe_upcycling_and_chinese_lab_mastery.md) | **Sovereign Dual-Tier MoE Upcycling & Chinese Lab Mastery** | 1.5B & 3B 4× MoE models, Chinese AI lab architecture, Top-1 routing, contrasting negative prompts, Kaggle `/tmp` partition separation, 5-vector battle test, and OLMo-2 7B 24× roadmap. |
+| [**`16_post_hoc_moe_failure_modes_public_releases_and_native_olmoe_master_plan.md`**](docs/16_post_hoc_moe_failure_modes_public_releases_and_native_olmoe_master_plan.md) | **Post-Hoc MoE Failure Modes, Public Adapter Releases & Native OLMoE Master Plan** | Attention-FFN desynchronization, pseudo-router attractor loops, public release of 8 adapters on HF, 70/20/10 curriculum law, native Allen AI OLMoE-1B-7B fine-tuning blueprint. |
+
 
 ---
 

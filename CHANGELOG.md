@@ -81,6 +81,11 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
 * **The GSM8K Tool Imperative**: Demonstrated empirical necessity of symbolic tool grounding: raw 2B scored 0.0% on multi-step arithmetic due to attention calculation drift, whereas SymPy-augmented 2B jumped to 60.0%.
 * **Private Showcase Repository**: Published complete unvarnished evaluation suite and telemetry to private showcase repo (`shreyansh001boy-tech/vigyan-stem-eval-showcase`) upholding radical honesty and zero synthetic 100% claims.
 
+---
 
-
-
+## [Phase 11: Post-Hoc MoE Upcycling Failure Modes, Public Adapter Releases & Native OLMoE Master Plan] - October 4–5, 2026
+* **Post-Hoc MoE Upcycling Forensic Analysis**: Diagnosed the mathematical mechanism of attention-FFN desynchronization and pseudo-router attractor loops on stitched $\le 3\text{B}$ MoEs.
+* **Public Experimental Model Release**: Released all 8 domain-specialized LoRA adapters (1.5B & 3B) and 2 assembled MoE models to Hugging Face as public research artifacts under Apache 2.0 with professional model cards and reproducibility code.
+* **The 70/20/10 Dataset Curriculum Law**: Formulated the strict partition standard (70% core domain, 20% conversational alignment, 10% base distribution anchors) to permanently eliminate delimiter blindness.
+* **Native MoE Standard (Allen AI OLMoE-1B-7B)**: Successfully deployed native OLMoE-1B-7B on AMD Ryzen 5 CPU locally, achieving 17–22 tokens/second with zero attractor loops.
+* **Master Plan Codified**: Created definitive 5-phase master blueprint for fine-tuning Allen AI native OLMoE on Kaggle Dual Tesla T4 GPUs with frozen router invariants.
