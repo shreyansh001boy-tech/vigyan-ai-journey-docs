@@ -95,6 +95,11 @@ flowchart TD
 
 ---
 
-## 🔒 Confidentiality
+## 📜 License & Sovereign Attribution
 
-This repository contains proprietary engineering artifacts, fine-tuning methodologies, private evaluation scorecards, and architectural blueprints created for the Vigyan AI ecosystem. All rights reserved.
+This architectural documentation and technical chronicle is published under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** license.
+
+- **Permitted Use:** Free for academic researchers, university coursework, engineering students, and personal non-commercial exploration.
+- **Commercial Restrictions:** Any commercial redistribution, enterprise implementation, or paid SaaS integration requires explicit written authorization.
+- **Founder & Chief Architect:** [Shreyansh Singh](https://github.com/shreyansh001boy-tech)
+- **Organization:** Vigyan AI / [ExperimentLab.in](https://experimentlab.in)
