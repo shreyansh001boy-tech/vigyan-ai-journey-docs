@@ -7,6 +7,21 @@
 [![Storage](https://img.shields.io/badge/HuggingFace%20Vault-10%20Repos%20%7C%20117%2B%20GB-orange.svg)](docs/06_cloud_and_infrastructure.md)
 [![License](https://img.shields.io/badge/License-Proprietary%20%2F%20Confidential-red.svg)](#confidentiality)
 
+
+## 🏛️ Academic Research Papers Series (2026)
+
+Official formal technical manuscripts detailing the sovereign training, routing, and alignment innovations of the Vigyan AI foundation model series:
+
+| Vol | Research Paper Title | Focus & Innovation | Artifacts | Weights & Kaggle |
+| :---: | :--- | :--- | :---: | :---: |
+| **01** | **Sparse MoE Upcycling & Router Stabilization** | Top-1/Top-2 routing, contrasting negative-prompt router calibration, shared expert stabilization | [Markdown / LaTeX](papers/01-sparse-moe-upcycling/) | [🤗 Model](https://huggingface.co/shreyansh12183/Vigyan-1.5B-4x-MoE) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-moe-upcycling-research-paper) |
+| **02** | **Depth Up-Scaling (DUS) & Seam Healing** | 22-layer transformer splice, 1B STEM token continual pre-training seam healing | [Markdown / LaTeX](papers/02-depth-up-scaling-seam-healing/) | [🤗 Model](https://huggingface.co/shreyansh12183/Shreyansh-STEM-AI-2B-v3) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-dus-seam-healing-research-paper) |
+| **03** | **Tool-Augmented Direct Preference Optimization** | Symbolic computer algebra (SymPy CAS) & NumPy grounding vs unassisted hallucination | [Markdown / LaTeX](papers/03-tool-augmented-dpo/) | [🤗 Model](https://huggingface.co/shreyansh12183/Vigyan-7B-STEM-DPO-v1) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-tool-dpo-symbolic-grounding-paper) |
+| **04** | **Test-Time Compute Elicitation via GRPO** | DeepSeek-R1 style Group Relative Policy Optimization on sub-3B edge reasoning SLMs | [Markdown / LaTeX](papers/04-grpo-reasoning-rl/) | [🤗 Model](https://huggingface.co/shreyansh12183/vigyan-2b-reasoning-grpo) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-grpo-reasoning-rl-paper) |
+| **05** | **Neuro-Symbolic Hybrid Evaluation Harness** | High-throughput C++ KùzuDB GraphRAG + SymPy AST engine vs external code-agent baselines | [Markdown / LaTeX](papers/05-neuro-symbolic-evaluation/) | [🤗 Model](https://huggingface.co/shreyansh12183/Vigyan-7B-STEM-Instruct-v1) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-neuro-symbolic-eval-paper) |
+
+---
+
 ---
 
 ## 🏛️ Executive Summary
