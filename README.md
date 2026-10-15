@@ -57,9 +57,17 @@ Over a multi-week sprint spanning AWS SageMaker FSDP distributed clusters, Kaggl
 | [**`14_vigyan_2b_edge_masterpiece_resurrection_and_honest_benchmarks.md`**](docs/14_vigyan_2b_edge_masterpiece_resurrection_and_honest_benchmarks.md) | **Vigyan-2B Edge Masterpiece Resurrection & Honest Benchmarks** | Curing the 0.048 overfit collapse, all-module LoRA targeting (66 MB), dynamic early stopping (step 60), 50-problem benchmark (+162.5% gain), private showcase repo. |
 | [**`15_sovereign_dual_tier_moe_upcycling_and_chinese_lab_mastery.md`**](docs/15_sovereign_dual_tier_moe_upcycling_and_chinese_lab_mastery.md) | **Sovereign Dual-Tier MoE Upcycling & Chinese Lab Mastery** | 1.5B & 3B 4× MoE models, Chinese AI lab architecture, Top-1 routing, contrasting negative prompts, Kaggle `/tmp` partition separation, 5-vector battle test, and OLMo-2 7B 24× roadmap. |
 | [**`16_post_hoc_moe_failure_modes_public_releases_and_native_olmoe_master_plan.md`**](docs/16_post_hoc_moe_failure_modes_public_releases_and_native_olmoe_master_plan.md) | **Post-Hoc MoE Failure Modes, Public Adapter Releases & Native OLMoE Master Plan** | Attention-FFN desynchronization, pseudo-router attractor loops, public release of 8 adapters on HF, 70/20/10 curriculum law, native Allen AI OLMoE-1B-7B fine-tuning blueprint. |
-
+| [**`17_the_attention_subspace_moe_adaptation_and_national_exam_benchmarking.md`**](docs/17_the_attention_subspace_moe_adaptation_and_national_exam_benchmarking.md) | **Attention Subspace MoE Adaptation & National Exam Benchmarking** | Attention subspace routing, JEE/GATE national STEM exam alignment, and multi-vector benchmark evaluation. |
+| [**`18_the_quad_master_trinity_and_3b_surpassing_7b.md`**](docs/18_the_quad_master_trinity_and_3b_surpassing_7b.md) | **The Sovereign Quad-Master Trinity & The 3B Breakthrough** | DARE-TIES (0.75 density) fusion, prompt loss masking on Kaggle Dual T4s, 3B surpassing 7B (69.0% vs. 65.0%) on 100 unseen frontier STEM questions, and deterministic Chief Judge SymPy/Verilog evaluation. |
 
 ---
+
+## 🏛️ Empirical Benchmark Harness
+
+All models from Chapter 18 are open-source and peer-auditable via our dedicated repository:
+👉 [**`shreyansh001boy-tech/vigyan-dpo-benchmark-harness`**](https://github.com/shreyansh001boy-tech/vigyan-dpo-benchmark-harness)  
+Execute instant deterministic validation in < 2 seconds: `python reproduce_fleet_audit.py --model all`
+
 
 ## 🧭 High-Level Fleet Topology
 
