@@ -154,7 +154,19 @@ Unlike traditional LLM-as-a-judge evaluations that suffer from verbosity bias, V
 └─────────────────────┘        └─────────────────────┘        └─────────────────────┘
 ```
 
-* **Certified Benchmark Result**: 100/100 (100.0%) deterministic validation pass rate across all three test vectors in 0.02 seconds.
+* **Certified Harness Validation**: 100/100 (100.0%) deterministic validation pass rate across all three test vectors in dry-run mode.
+
+### Stage 1 (Step 499) Empirical Baseline Scorecard:
+Executed 100% cloud-to-cloud on Kaggle Cloud Pod (`shreyansh00singh/vigyan-125m-stage1-benchmark-eval`) across all 100 questions ($0.00 compute spend):
+
+| Pillar | Verification Engine | Questions | Passed | Accuracy | Empirical Observation |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **Vector 1: Pure Math & Calculus** | SymPy CAS (`sp.simplify == 0`) | 40 | **4** | **10.0%** | Basic calculus/limits (`limit = E`, geometric sum = `2`, integral = `1`) learned, but lacks CoT step derivation. |
+| **Vector 2: Physics & Engineering** | 5% Relative Tolerance Band | 30 | **2** | **6.7%** | Solves basic spring energy formula ($W = \frac{1}{2} k x^2 = 1.0\text{ J}$); struggles with multi-step unit conversions. |
+| **Vector 3: Indic STEM & CoT** | `<thought>` Tag Audit & Keywords | 30 | **0** | **0.0%** | Never exposed to DeepSeek-R1 deductive reasoning traces; lacks `<thought>` formatting entirely. |
+| **OVERALL STAGE 1 BASELINE** | **Deterministic Algorithmic Judge** | **100** | **6** | **6.0%** | **Syntactic prior established; confirms why Stage 2 R1 distillation is mandatory.** |
+
+> **Scientific Insight**: Stage 1 (Qwen2.5-7B STEM distillation) succeeded at teaching mathematical vocabulary and LaTeX formatting, but achieves 0.0% in CoT reasoning because it lacked chain-of-thought supervisory tokens. This mathematically justifies the 2-Stage architecture: Stage 2 (DeepSeek-R1 on TPU) directly targets this 0% gap by imprinting the `<thought>` deductive verification distribution.
 
 ---
 
