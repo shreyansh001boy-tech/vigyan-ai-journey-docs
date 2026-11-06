@@ -186,7 +186,7 @@ Executed 100% cloud-to-cloud on Kaggle Cloud Pod (`shreyansh00singh/vigyan-125m-
 
 ## 7. Strategic Scaling Roadmap: Sovereign Flagship (Vigyan-1B)
 
-With the 125M Canary serving as our verified wind-tunnel test vehicle, our full cloud compute budget (**\$100 AWS credits + \$200 Vultr credits**) is committed directly to the production model:
+With the 125M Canary serving as our verified wind-tunnel test vehicle, our cloud pretraining compute (Modal serverless GPUs + Kaggle TPU v5e-8, $0.00 spend) is committed directly to the production model:
 
 * **Model**: **Vigyan-1B Flagship**
 * **Target Footprint**: $\sim 200\text{ MB}$ packed ternary.
