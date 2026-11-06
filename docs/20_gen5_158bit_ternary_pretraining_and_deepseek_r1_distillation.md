@@ -101,9 +101,9 @@ sequenceDiagram
     participant R as Teacher 2: DeepSeek-R1-7B (Deductive CoT)
     participant V as Private Vault (shreyansh12183/vigyan-125m-distilled)
 
-    D->>Q: Stage 1 Distillation on Dual Tesla T4s (38 Commits)
-    Q-->>D: Loss Plunge: 5,390 -> 1,608 (-70.2%)
-    Note over D,Q: Step 466 Checkpoint Banked on Hugging Face
+    D->>Q: Stage 1 Distillation on Dual Tesla T4s (49 Commits)
+    Q-->>D: Loss Plunge: 5,390 -> 1,445.77 (-73.2%)
+    Note over D,Q: Step 488 Checkpoint Banked on Hugging Face
     D->>R: Stage 2 Distillation on TPU v3-8 (128 GB HBM, $0.00)
     R-->>D: Imprint <thought>...</thought> Reasoning Tokens
     D->>V: Final Distilled Reasoning Artifact Released
@@ -111,12 +111,14 @@ sequenceDiagram
 
 ### Stage 1 (Qwen2.5-7B STEM Distillation):
 * **Hardware**: Kaggle Dual Tesla T4s (32 GB VRAM).
-* **Duration**: 11+ hours continuous execution, 47 automated commits.
+* **Duration**: 11h 45m+ continuous execution, 49 automated commits banked.
 * **Loss Trajectory**:
   * Step 11: $5,390.19$
   * Step 100: $2,892.40$
   * Step 277: $1,607.39$
-  * Step 466: $1,663.19$ (Plateau reached; $-69.1\%$ loss reduction).
+  * Step 466: $1,663.19$
+  * Step 477: $1,445.77$
+  * Step 488: $1,599.39$ ($-73.2\%$ loss plunge from cold start).
 
 ### Stage 2 (DeepSeek-R1 Reasoning Distillation):
 * **Hardware**: Kaggle Free TPU v3-8 (128 GB HBM, 330 GB Host RAM).
