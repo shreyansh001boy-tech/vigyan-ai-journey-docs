@@ -2,9 +2,9 @@
 
 > **An exhaustive, unvarnished technical chronicle of building, training, distilling, benchmarking, and serving an independent sovereign AI model fleet from India.**
 
-[![Fleet Architecture](https://img.shields.io/badge/Architecture-1.5B%20MoE%20%7C%203B%20MoE%20%7C%207B%20%7C%2032B-blue.svg)](docs/01_architecture_overview.md)
-[![Verified Score](https://img.shields.io/badge/7B%20Benchmark-68.2%25%20Calibrated-success.svg)](docs/04_benchmarking_and_evaluation.md)
-[![Storage](https://img.shields.io/badge/HuggingFace%20Vault-10%20Repos%20%7C%20117%2B%20GB-orange.svg)](docs/06_cloud_and_infrastructure.md)
+[![Fleet Architecture](https://img.shields.io/badge/Architecture-1.58--Bit%20BitNet%20%7C%20125M%20%7C%201B%20%7C%203B%20%7C%207B-blue.svg)](docs/20_gen5_158bit_ternary_pretraining_and_deepseek_r1_distillation.md)
+[![Verified Score](https://img.shields.io/badge/100Q%20Chief%20Judge-100%25%20Algorithmic-success.svg)](docs/20_gen5_158bit_ternary_pretraining_and_deepseek_r1_distillation.md)
+[![Storage](https://img.shields.io/badge/HuggingFace%20Vault-12%20Repos%20%7C%20120%2B%20GB-orange.svg)](docs/06_cloud_and_infrastructure.md)
 [![License](https://img.shields.io/badge/License-Proprietary%20%2F%20Confidential-red.svg)](#confidentiality)
 
 
@@ -19,6 +19,7 @@ Official formal technical manuscripts detailing the sovereign training, routing,
 | **03** | **Tool-Augmented Direct Preference Optimization** | Symbolic computer algebra (SymPy CAS) & NumPy grounding vs unassisted hallucination | [Markdown / LaTeX](papers/03-tool-augmented-dpo/) | [🤗 Model](https://huggingface.co/shreyansh12183/Vigyan-7B-STEM-DPO-v1) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-tool-dpo-symbolic-grounding-paper) |
 | **04** | **Test-Time Compute Elicitation via GRPO** | DeepSeek-R1 style Group Relative Policy Optimization on sub-3B edge reasoning SLMs | [Markdown / LaTeX](papers/04-grpo-reasoning-rl/) | [🤗 Model](https://huggingface.co/shreyansh12183/vigyan-2b-reasoning-grpo) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-grpo-reasoning-rl-paper) |
 | **05** | **Neuro-Symbolic Hybrid Evaluation Harness** | High-throughput C++ KùzuDB GraphRAG + SymPy AST engine vs external code-agent baselines | [Markdown / LaTeX](papers/05-neuro-symbolic-evaluation/) | [🤗 Model](https://huggingface.co/shreyansh12183/Vigyan-7B-STEM-Instruct-v1) · [📦 Kaggle](https://www.kaggle.com/datasets/shreyansh00singh/vigyan-neuro-symbolic-eval-paper) |
+| **06** | **Multiplier-Free 1.58-Bit Ternary Pretraining & DeepSeek-R1 CoT Distillation** | Cold-start BitNet b1.58 QAT (50.33M tokens, Loss $10.10 \to 0.01$), SubLN stabilization, Top-256 logit distillation from Qwen2.5-7B and DeepSeek-R1-7B | [Markdown / Blueprint](docs/20_gen5_158bit_ternary_pretraining_and_deepseek_r1_distillation.md) | [🤗 Canary](https://huggingface.co/shreyansh12183/vigyan-125m-158bit-canary) · [🤗 Distilled](https://huggingface.co/shreyansh12183/vigyan-125m-distilled) |
 
 ---
 
@@ -60,6 +61,7 @@ Over a multi-week sprint spanning AWS SageMaker FSDP distributed clusters, Kaggl
 | [**`17_the_attention_subspace_moe_adaptation_and_national_exam_benchmarking.md`**](docs/17_the_attention_subspace_moe_adaptation_and_national_exam_benchmarking.md) | **Attention Subspace MoE Adaptation & National Exam Benchmarking** | Attention subspace routing, JEE/GATE national STEM exam alignment, and multi-vector benchmark evaluation. |
 | [**`18_the_quad_master_trinity_and_3b_surpassing_7b.md`**](docs/18_the_quad_master_trinity_and_3b_surpassing_7b.md) | **The Sovereign Quad-Master Trinity & The 3B Breakthrough** | DARE-TIES (0.75 density) fusion, prompt loss masking on Kaggle Dual T4s, 3B surpassing 7B (69.0% vs. 65.0%) on 100 unseen frontier STEM questions, and deterministic Chief Judge SymPy/Verilog evaluation. |
 | [**`19_gen4_physical_ai_cosmos_molmo_and_scientific_ml.md`**](docs/19_gen4_physical_ai_cosmos_molmo_and_scientific_ml.md) | **Vigyan Gen-4: Sovereign Physical AI, World Models & Scientific ML** | Synthesis of NVIDIA Cosmos 3 (World Models), Molmo 2 (PixMo Pointing), OLMo 3 (RLVR Reasoning), and Non-Generative ML (PINNs, FNOs, GNNs) into an integrated sovereign edge platform. |
+| [**`20_gen5_158bit_ternary_pretraining_and_deepseek_r1_distillation.md`**](docs/20_gen5_158bit_ternary_pretraining_and_deepseek_r1_distillation.md) | **Vigyan Gen-5: 1.58-Bit Ternary Pretraining & DeepSeek-R1 Distillation Blueprint** | Cold-start BitNet b1.58 QAT pretraining (50.33M tokens, Loss $10.10 \to 0.01$), empirical ternary weight distribution proof (34.63% / 30.89% / 34.48%), 2-stage distillation (Qwen 7B STEM + DeepSeek-R1 CoT), 100-Question Algorithmic Chief Judge benchmark, edge CPU addition throughput (75–120 tok/s). |
 
 ---
 
@@ -80,28 +82,34 @@ flowchart TD
         D3[LanceDB 2,205 Vector Store]
     end
 
-    subgraph Sparse MoE Fleet
-        MOE1[Vigyan-1.5B 4× MoE\nTop-1 Routing | 11.9 GB]
-        MOE3[Vigyan-3B 4× MoE\nTop-1 Routing | 23.9 GB]
-        FLAG[Flagship: OLMo-2 7B 24× MoE\nTop-2 Active Workstation]
+    subgraph Gen5_Ternary_Fleet ["Gen-5 1.58-Bit Ternary Fleet (Multiplier-Free)"]
+        CANARY["Vigyan-125M Canary<br/>1.58-Bit | 25 MB RAM<br/>SubLN + DeepSeek-R1 CoT"]
+        FLAG1B["Vigyan-1B Flagship<br/>1.58-Bit | ~200 MB RAM<br/>Full STEM Reasoning & SymPy CAS"]
     end
 
-    subgraph Dense Model Fleet
-        M32[Vigyan-32B Titan\n14 Shards ~60 GB]
-        M7[Vigyan-7B Scholar\n68.2% Calibrated Score]
-        M2[Vigyan-2B Edge\n1.4 GB Q4_K_M GGUF]
+    subgraph Sparse_MoE_Fleet ["Sparse MoE Fleet"]
+        MOE1["Vigyan-1.5B 4× MoE<br/>Top-1 Routing | 11.9 GB"]
+        MOE3["Vigyan-3B 4× MoE<br/>Top-1 Routing | 23.9 GB"]
+        FLAG["Flagship: OLMo-2 7B 24× MoE<br/>Top-2 Active Workstation"]
     end
 
-    subgraph Infrastructure
-        AWS[AWS SageMaker G5 Clusters\nDistributed FSDP]
-        KAG[Kaggle Dual T4 Fleet\nPartition-Separated MoE Upcyclers]
-        HF[Hugging Face Vault\n10 Repositories | 117+ GB]
+    subgraph Dense_Model_Fleet ["Dense Model Fleet"]
+        M32["Vigyan-32B Titan<br/>14 Shards ~60 GB"]
+        M7["Vigyan-7B Scholar<br/>68.2% Calibrated Score"]
+        M2["Vigyan-2B Edge<br/>1.4 GB Q4_K_M GGUF"]
     end
 
-    subgraph Serving Layer
-        GW[FastAPI Unified Gateway]
-        MOD[vLLM Inference Container\n7B Engine]
-        ORA[llama.cpp Engine\nEdge MoE & SLMs]
+    subgraph Infrastructure ["Sovereign Infrastructure"]
+        AWS["AWS SageMaker G5 Clusters<br/>Distributed FSDP"]
+        TPU["Kaggle TPU v3-8 Pods<br/>128 GB HBM | PyTorch/XLA ($0.00)"]
+        KAG["Kaggle Dual T4 Fleet<br/>Cross-GPU Top-256 Slicing"]
+        HF["Hugging Face Vault<br/>12 Repositories | 120+ GB"]
+    end
+
+    subgraph Serving_Layer ["Serving & Edge Deployment"]
+        GW["FastAPI Unified Gateway"]
+        MOD["vLLM Inference Container<br/>7B Engine"]
+        ORA["bitnet.cpp / llama.cpp<br/>CPU Integer Addition SIMD (75-120 tok/s)"]
     end
 
     D1 --> M32
@@ -109,6 +117,10 @@ flowchart TD
     M32 -- SFT Distillation --> M2
     D2 --> MOE1
     D2 --> MOE3
+    D2 --> CANARY
+    CANARY --> FLAG1B
+    CANARY --> ORA
+    FLAG1B --> ORA
     MOE1 --> ORA
     MOE3 --> ORA
     M7 --> MOD
