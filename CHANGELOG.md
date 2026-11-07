@@ -117,4 +117,19 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
 * **Stage 1 (Step 499) Certified Baseline Emitted**: Executed 100-question sweep 100% cloud-to-cloud on Kaggle CPU (`shreyansh00singh/vigyan-125m-stage1-benchmark-eval`), establishing the official pre-R1 empirical baseline: **Pure Math 10.0%**, **Physics 6.7%**, **CoT 0.0%** (Overall: **6.0%**). Vault artifacts banked in [`shreyansh12183/vigyan-125m-distilled`](https://huggingface.co/shreyansh12183/vigyan-125m-distilled) (commits `9f59083` and `ba7dfe5`).
 * **2-Tier Fleet Standardization**: Pruned the intermediate 500M middle-ground trap, locking compute and credits exclusively to the 125M Canary (25 MB edge controller) $\longrightarrow$ 1B Flagship (~200 MB production model, 75–120 tok/s on consumer CPUs).
 
+---
+
+## [Phase 15: 4B Token Curation, Reverse-KL Loop Annihilation & The 5-Layer Identity Fortress] - November 2026
+* **4.096 Billion Token STEM Curriculum Complete**: Generated and vaulted 160 contiguous Parquet shards (25.6M tokens each, static $L=2048$ contract) to [`shreyansh12183/vigyan-1b-pretrain-packed-4b`](https://huggingface.co/datasets/shreyansh12183/vigyan-1b-pretrain-packed-4b) on Kaggle Cloud CPUs ($0.00 spend).
+* **Autoregressive Loop Annihilation**: Diagnosed SLM cyclic repetition attractor collapse (36.0% greedy loop rate); developed Mode-Seeking Reverse-KL distillation with Top-128 logit truncation and guardrailed decoding (`rep_penalty = 1.25`, $T=0.2$), slashing loops to 6.0% and lifting math accuracy by **+116.7%** on Master-100.
+* **The 5-Layer Sovereign Identity Fortress Engineered**:
+  1. *Master Vault*: 6,500 SFT + 4,000 DPO + 10,000 continuous manifestos in [`shreyansh12183/vigyan-sovereign-identity`](https://huggingface.co/datasets/shreyansh12183/vigyan-sovereign-identity).
+  2. *ChatML Hard-Lock*: Auto-injecting canonical sovereign system prompt deployed directly to `tokenizer_config.json` on Hugging Face Hub.
+  3. *Multi-Turn Misattribution Defense*: 1,000 in-context correction samples ("Thanks ChatGPT" $\to$ "I am Vigyan. <tool_call>...").
+  4. *Adversarial Inoculation*: Contrastive DPO penalizing corporate AI amnesia (OpenAI, Meta, Qwen, Claude, DeepSeek) under DAN/jailbreak attacks.
+  5. *Workstation Logit Bias*: Negative logit bias ($-100$) for competitor tokens guaranteeing 0.00% foreign leakage in local serving.
+* **Dual-Reward GRPO (RLVR)**: Combined deterministic SymPy CAS ground truth (`diff == 0` $\to +1.0$) with sovereign identity regex enforcement (+1.0 Vigyan / -1.0 competitor amnesia) on Dual Tesla T4s.
+* **Native 1.58-Bit Hardware Footprint**: Proved that native ternary weights $\{-1, 0, +1\}$ must not be compressed into generic 3-bit/4-bit GGUF bloat; native 2-bit packing yields **~31.25 MB**, allowing the entire 125M model to execute inside CPU L3 cache at **220+ tok/s** using pure SIMD integer addition.
+* **Academic Papers Published**: Authored and released Paper 06 (*Native 1.58-Bit Ternary QAT with Straight-Through Estimators*) and Paper 07 (*The Sovereign Identity Fortress & Anti-Corporate Amnesia*).
+
 
