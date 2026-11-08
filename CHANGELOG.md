@@ -132,4 +132,17 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
 * **Native 1.58-Bit Hardware Footprint**: Proved that native ternary weights $\{-1, 0, +1\}$ must not be compressed into generic 3-bit/4-bit GGUF bloat; native 2-bit packing yields **~31.25 MB**, allowing the entire 125M model to execute inside CPU L3 cache at **220+ tok/s** using pure SIMD integer addition.
 * **Academic Papers Published**: Authored and released Paper 06 (*Native 1.58-Bit Ternary QAT with Straight-Through Estimators*) and Paper 07 (*The Sovereign Identity Fortress & Anti-Corporate Amnesia*).
 
+---
+
+## [Phase 16: Cloud TPU v3-8 Pretraining from Token Zero & The Sovereign Research Trilogy] - November 2026
+* **Vigyan-1B BitNet TPU Pretraining Dispatched**: Launched 1.05B-parameter BitNet b1.58 pretraining on Kaggle Google Cloud TPU v3-8 (8 Tensor Cores, 128 GiB Aggregate HBM, 330 GB Host RAM) across 4.096B packed tokens (`shreyansh00singh/vigyan-1b-pretrain-tpu`).
+* **Python 3.13 TPU ABI Collisions Solved**: Diagnosed and neutralized Kaggle Python 3.13 `_XLAC.so` undefined symbol crashes and `torchaudio.abi3.so` transitive import errors by enforcing matching PyPI wheels (`torch==2.8.0 torch-xla[tpu]==2.8.0`) with `PJRT_DEVICE=TPU` and `xmp.spawn(nprocs=1)`.
+* **NVMe Pre-Caching Breakthrough**: Overcame the 40× HTTP streaming bottleneck (1,248 tok/s) by implementing local NVMe pre-caching, downloading all 160 Parquet shards (5.50 GB) in 37 seconds to sustain peak ~130,000 tok/s hardware throughput.
+* **Vigyan-125M QAT Tool SFT**: Executed 3,000 optimizer steps (12,000 micro-batches) on Dual Tesla T4 GPUs across 27,500 sovereign atomic tool pairs with non-destructive STE closures (`make_ternary_forward`) and Theorem 1 zero-weight-decay on ternary projections.
+* **The Sovereign Research Trilogy Published on Kaggle**: Authored, compiled, and published three landmark open research papers under [`shreyansh00singh`](https://www.kaggle.com/shreyansh00singh):
+  1. *The Sovereign Identity Fortress: Eliminating LLM Amnesia via Multi-Turn DPO and Token-Zero Interleaving*.
+  2. *Zero-Cost 1.58-Bit Ternary Foundations: Pretraining BitNet b1.58 from Token Zero on Free Cloud TPUs*.
+  3. *Zero-Hallucination SymPy CAS Tool Calling via Critic-Free On-Policy GRPO*.
+
+
 
