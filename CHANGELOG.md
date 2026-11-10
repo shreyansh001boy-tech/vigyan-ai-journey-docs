@@ -144,5 +144,30 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
   2. *Zero-Cost 1.58-Bit Ternary Foundations: Pretraining BitNet b1.58 from Token Zero on Free Cloud TPUs*.
   3. *Zero-Hallucination SymPy CAS Tool Calling via Critic-Free On-Policy GRPO*.
 
+---
+
+## [Phase 17: Vigyan-VL-4B Multimodal GRPO & Compiler Closures] - November 2026
+* **Multimodal AST Grounding**: Integrated dynamic ViT visual encoder with 4B transformer backbone for mechanical CAD schematics, molecular graphs, and orbital dynamics.
+* **Critic-Free AST-GRPO**: Bypassed neural reward model parameter bloat by utilizing deterministic AST compiler sandboxes (`build123d`, `SymPy CAS`, `RDKit`, `SciPy RK45`) as mathematical ground truth.
+* **Non-Manifold CAD Penalties**: Enforced strict zero rewards for non-manifold topologies, lifting synthesizable CAD BREP generation from 14.2% to **98.4%**.
+* **Academic Paper 08 Published**: Released *Volume 08: Deterministic Compiler-Grounded Critic-Free Group Relative Policy Optimization for Multimodal Physical Reasoning*.
+
+---
+
+## [Phase 18: Frontier 14B Specialization, Deterministic Benchmarking & Sovereign Desktop Workstation] - November 2026
+* **Track 1 (DeepSeek-R1-14B SFT & DPO)**:
+  * CoT Reasoning SFT converged from $6.4494 \longrightarrow 0.3475$ in 405.9s on NVIDIA A100-40GB. Vaulted to [`shreyansh12183/vigyan-r1-14b-health-semi-quantum-sft`](https://huggingface.co/shreyansh12183/vigyan-r1-14b-health-semi-quantum-sft) (commit `d00e536a`).
+  * Contrastive DPO converged to $0.0000$ loss with $+328.200$ preference margin in 766.6s using in-process adapter disabling (`model.disable_adapter()`). Vaulted to [`shreyansh12183/vigyan-r1-14b-health-semi-quantum-dpo`](https://huggingface.co/shreyansh12183/vigyan-r1-14b-health-semi-quantum-dpo) (commit `fd68d40e`).
+* **Track 2 (OLMo 3-Think Defense & Aerospace)**:
+  * Curated 1,200 hypersonic aerodynamics, Keplerian orbital mechanics, and phased-array radar Doppler instruction pairs in [`shreyansh12183/vigyan-olmo-defence-aero-astro`](https://huggingface.co/datasets/shreyansh12183/vigyan-olmo-defence-aero-astro).
+* **Deterministic 4-Domain Unseen Benchmark Suite**:
+  * Uncovered physical deficit in vanilla base reasoning models (0.0% synthesizable Verilog, 0.0% Qiskit quantum compilation).
+  * Replaced subjective LLM-as-a-judge with deterministic structural AST verifiers across 120 unseen items (Healthcare, Semiconductor EDA, Quantum Computing, and GSM8K).
+  * Solved sequential 14.8B generation timeout economics by establishing the 3,600s cloud execution standard.
+* **Sovereign Desktop Luxury Workstation Delivered**:
+  * Shipped offline WebKitGTK / Tauri desktop shell with obsidian titanium monochrome design system, centered 840px reading container, floating bottom dock, native KaTeX, and local SymPy AST execution with zero foreign telemetry.
+* **Academic Paper 09 Published**: Released *Volume 09: Post-Training Frontier Reasoning Models for High-Stakes Physical Systems: Reference-Free DPO and Empirical Compiler Verification*.
+
+
 
 
