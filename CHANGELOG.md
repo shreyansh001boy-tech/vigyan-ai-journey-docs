@@ -168,6 +168,20 @@ All notable milestones and technical evolutions of the Vigyan AI journey are rec
   * Shipped offline WebKitGTK / Tauri desktop shell with obsidian titanium monochrome design system, centered 840px reading container, floating bottom dock, native KaTeX, and local SymPy AST execution with zero foreign telemetry.
 * **Academic Paper 09 Published**: Released *Volume 09: Post-Training Frontier Reasoning Models for High-Stakes Physical Systems: Reference-Free DPO and Empirical Compiler Verification*.
 
+---
+
+## [Phase 19: DPO Representation Collapse Post-Mortem, SFT Revert & Cloud-to-Cloud IQ3_M Quantization] - November 2026
+* **Mathematical Diagnosis of DPO Failure**: Discovered that unbounded DPO with $+328.200$ margin caused likelihood displacement and entropy collapse, degrading unseen clinical mathematics to 20.0%.
+* **Track 1 SFT Formal Revert**: Reverted Track 1 to canonical SFT adapter (`shreyansh12183/vigyan-r1-14b-health-semi-quantum-sft`), preserving generative entropy, modern Qiskit 1.x syntax, and synthesizable Verilog RTL.
+* **Kaggle Dual Tesla T4 Cloud-to-Cloud Pipeline ($0.00 Spend)**: Built and pushed standalone kernel `shreyansh00singh/vigyan-14b-sft-merge-quant-iq3-and-benchmark`:
+  * Fuses SFT LoRA weights into base 14B model in `bfloat16`.
+  * Compiles `llama.cpp` with CUDA acceleration.
+  * Enforces the aggressive NVMe disk cascade (deleting merged PyTorch weights before quantization) to preserve Kaggle scratch space.
+  * Quantizes to **IQ3_M** (~6.1 GB) and auto-vaults to [`shreyansh12183/vigyan-r1-14b-health-semi-quantum-gguf`](https://huggingface.co/shreyansh12183/vigyan-r1-14b-health-semi-quantum-gguf).
+  * Serves via `llama-server` and evaluates the 120-item unseen AST enterprise benchmark.
+* **SFT Primacy Invariant Established for OLMo 3-Think**: Expanded Track 2 curriculum to 2,800 SymPy-verified golden pairs in [`shreyansh12183/vigyan-olmo-defence-aero-astro`](https://huggingface.co/datasets/shreyansh12183/vigyan-olmo-defence-aero-astro) under pure high-density SFT.
+
+
 
 
 
